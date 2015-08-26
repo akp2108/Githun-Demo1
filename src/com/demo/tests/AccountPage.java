@@ -14,10 +14,12 @@ public class AccountPage {
 		driver = new FirefoxDriver();
 		
 		driver.get("http://docs.seleniumhq.org/");
+		String titleHomePage = driver.getTitle();
+		
 		
 		driver.findElement(By.linkText("Download")).click();
 		Thread.sleep(2000);
-		driver.getTitle();
+		String titleDownloadPage = driver.getTitle();
 	}
 
 }
